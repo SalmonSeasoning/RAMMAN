@@ -39,3 +39,15 @@ use different methods of getting the same process ID.
 For similar functions / methods, use the one that works best on average on multiple systems.
 If one of these functions are not consistent, use the other one. If both are consistent,
 which one you use really is up to you.
+
+## Read / Write example
+```cpp
+using namespace RAMMAN;
+HANDLE pHandle = MemReadWrite::GetProcessHandleByName("myapp");
+if(pHandle == NULL) return -1;
+DWORD myAddr = 0x0000F; // location in memory to access (don't use this one lol)
+int myInt = MemReadWrite::StaticReadMemory<int>(pHandle, myAddr);
+if(myInt == 5){
+  MemReadWrite::StaticWriteMemory<int>(pHandle, myAddr, 6);
+}
+```
