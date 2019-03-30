@@ -7,13 +7,14 @@ However, it might be more effective to just leave the project as is, and use the
 singular header file instead.
 
 The following shows you how to set this up for a process.
-```
+```cpp
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 #include "MemReadWrite.h"
 int main()
 {
-	RAMMAN::MemReadWrite mrw = MemReadWrite();
+	using namespace RAMMAN;
+	MemReadWrite mrw = MemReadWrite();
 	DWORD pId = mrw.GetProcessIdByName("target application name");
 	mrw.SetHandle( pId );
 	// your code goes here
