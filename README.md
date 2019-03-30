@@ -15,7 +15,7 @@ int main()
 {
 	using namespace RAMMAN;
 	MemReadWrite mrw = MemReadWrite();
-	DWORD pId = mrw.GetProcessIdByName("target application name");
+	DWORD pId = mrw.GetProcessIdByName(L"target application name");
 	mrw.SetHandle( pId );
 	// your code goes here
 	std::cin.get();
@@ -43,7 +43,7 @@ which one you use really is up to you.
 ## Read / Write example
 ```cpp
 using namespace RAMMAN;
-HANDLE pHandle = MemReadWrite::GetProcessHandleByName("myapp");
+HANDLE pHandle = MemReadWrite::GetProcessHandleByName(L"myapp");
 if(pHandle == NULL) return -1;
 DWORD myAddr = 0x0000F; // location in memory to access (don't use this one lol)
 int myInt = MemReadWrite::StaticReadMemory<int>(pHandle, myAddr);
