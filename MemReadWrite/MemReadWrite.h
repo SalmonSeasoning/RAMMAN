@@ -1,6 +1,6 @@
 #pragma once
 
-#include "targetver.h"
+// #include "targetver.h" that's generally not necessary 
 
 #define WIN32_LEAN_AND_MEAN
 
