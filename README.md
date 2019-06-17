@@ -1,6 +1,14 @@
 # RAMMAN
 Memory Read and Write processes
 
+Note: This is for external use ONLY!!! If you are going to be managing memory
+internally, in your own process or through DLL injection, you are not going
+to be able to use this to any advantage.
+
+However, if you are using C#, with a couple modifications which I might add
+later on, you could compile this as a DLL for something like an external
+C# game hack.
+
 ## How to use
 You can either modify and compile this as a DLL or you can compile it as a .lib.
 However, it might be more effective to just leave the project as is, and use the
