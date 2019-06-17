@@ -9,6 +9,8 @@ However, if you are using C#, with a couple modifications which I might add
 later on, you could compile this as a DLL for something like an external
 C# game hack.
 
+> **Temporarily Unicode only.**
+
 ## How to use
 You can either modify and compile this as a DLL or you can compile it as a .lib.
 However, it might be more effective to just leave the project as is, and use the
